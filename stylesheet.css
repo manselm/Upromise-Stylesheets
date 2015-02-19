@@ -187,6 +187,7 @@ sup.danger {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  z-index:101;
 }
 
 /* Styles that apply to all SelectBoxIt elements */
@@ -214,6 +215,7 @@ sup.danger {
   overflow: hidden;
   display: block;
   position: relative;
+  z-index:101;
 }
 
 /* Height and Vertical Alignment of Text */
@@ -686,9 +688,9 @@ div.navbar .navbar-right {
 	margin-top:10px;
 }
 
-div.navbar #search {
+#desktop_nav #search {
 	padding:0px;
-        width:220px !important;
+    width:220px !important;
 }
 
 div.navbar #search form {
@@ -864,6 +866,7 @@ li.social_icons a img {
     line-height: 1.42857;
     padding: 3px 0px;
     white-space: nowrap;
+	z-index:99999999;
 }
 
 #mobile_nav .avatar .glyphicon {
@@ -879,6 +882,7 @@ li.social_icons a img {
 	left:auto;
 	padding-left:20px;
 	padding-right:20px;
+	z-index:99999;
 }
 
 #mobile_nav #search form {
@@ -1247,6 +1251,95 @@ font-size: 2.250em;
 
 #cycle_gateway_wrap {
 	overflow:hidden;
+}
+
+/* Tables */
+
+#carousel img#holiday_banner {
+background-image: url(|IMAGESRC|/pattern9-pattern.jpg);
+background-repeat: repeat;
+}
+.carousel-inner table#holiday_banner .dd_copy {
+	font-size:19px;	
+}
+
+.carousel-inner table#holiday_banner .offer_amt {
+	font-size:28px;	
+}
+
+#holiday_banner td#banner_left {
+	text-align:left;
+	color:#44464a;
+	padding:10px 10px 10px 50px;
+}
+
+#holiday_banner td p {
+	margin-bottom:5px;	
+}
+
+#holiday_banner td img#bow { 
+	padding-right:25px;
+	width:100px;	
+}
+
+@media (max-width: 768px) {
+	
+.carousel-inner table#holiday_banner .dd_copy, .carousel-inner table#holiday_banner .offer_amt {
+	font-size:1.1em;
+}
+	.carousel-inner table#holiday_banner {
+	top:10%;	
+}
+
+
+
+#holiday_banner td#banner_left {
+	width:65%;	
+}
+
+#holiday_banner td#banner_right {
+	width:35%;
+}
+
+#holiday_banner td#banner_right img {
+	max-width:100%;
+		
+}
+
+}
+
+@media (min-width:990px) and (max-width:1200px) {
+
+}
+
+@media (min-width:401px) and (max-width:768px) {
+.carousel-inner table#holiday_banner {
+top:10%;	
+}	
+}
+
+@media (max-width: 500px) {
+.carousel-inner table#holiday_banner .dd_copy, .carousel-inner table#holiday_banner .offer_amt {
+	font-size:.9em;
+	line-height:1.2;
+}
+
+#holiday_banner td#banner_right img {
+	max-width:150px;
+}
+	
+}
+
+@media (max-width: 399px) {
+	.carousel-inner table#holiday_banner {
+	top:-5px;	
+}
+
+#holiday_banner td#banner_right img {
+	max-width:150px;
+		
+}
+	
 }	
 
 /* BX Slider */
@@ -1298,14 +1391,6 @@ font-size: 2.250em;
 	padding:18px 0px 22px 0px;	
 }
 
-.bx-wrapper .slide a {
-	height:90px;	
-}
-
-.bx-wrapper .slide a img {
-	padding-top:20px;	
-}
-
 .bx-wrapper .slide a.local {
 	min-height:90px;	
 	padding:20px 0px 0px;
@@ -1321,6 +1406,21 @@ font-size: 2.250em;
 	xdisplay:block;
 	xtext-align:center;
 	xmargin:5px 0px 0px -10px;
+}
+
+/* Vertical Centering */
+
+.bx-wrapper .slide a {
+	height: 100px;
+	width: 120px;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0px auto;	
+}
+
+.bx-wrapper .slide a img {
+	max-height:100px;
+	max-width:100px;	
 }
 
 
@@ -1550,9 +1650,43 @@ font-size: 2.250em;
 	text-align:center;	
 }
 
+.article .paid .col-md-4, .benefits .paid .col-md-4 {
+	xmargin-bottom:25px;
+	height:175px;	
+}
 
-#paid_placement_one a {
-	xwidth:120px;	
+.article #paid_placement_two .col-md-4 {
+	height:auto;
+	margin-bottom:0px;
+}
+
+
+#paid_placement_one a, #search_ad div a, #paid_placement_two div.col-md-6 a, #paid_placement_three .col-sm-3 a {
+	display:block;
+	margin-bottom:30px;	
+}
+
+.paid .amzn_footnote {
+	font-size:0.6em;	
+}
+
+#search_ad {
+	xwidth:180px;
+}	
+
+#search_ad div a {
+	color:#000;
+	text-align:center;	
+}
+
+#search_ad div img {
+	display:block;
+	margin-bottom:10px;	
+}
+
+#search_ad div, #search_ad div div {
+	text-align:center;
+	width:185px !important;
 }
 
 #paid_placement_one .panel-body div > div {
@@ -1563,8 +1697,8 @@ font-size: 2.250em;
 	font-weight:bold;	
 }
 
-#paid_placement_two a {
-	xwidth:180px;	
+#paid_placement_two div.col-md-6 a img {
+	margin-bottom:10px;	
 }
 
 #paid_placement_two div div div div  {
@@ -1577,7 +1711,7 @@ font-size: 2.250em;
 	
 }
 
-#paid_placement_three a {
+#paid_placement_three .col-xs-6 {
 	padding:10px 0px;	
 }
 
@@ -1605,6 +1739,10 @@ font-size: 2.250em;
 }
 
 /* Disclaimer */
+
+#disclaimer_row {
+	float:left;
+}
 
 .disclaimer {
 	margin-top:25px;
@@ -1705,6 +1843,14 @@ font-size: 2.250em;
 	
 }
 
+#offer_table tr th {
+	white-space:normal;
+}
+
+#offer_table tr th.offer {
+	white-space:nowrap;	
+}
+
 #offer_table tr .keyword_results {
 	text-align:left;	
 }
@@ -1731,11 +1877,25 @@ table tr td.offer .cell_data div div {
 	color:#000;
 }
 
+#offer_table img {
+	max-width:100px;
+	max-height:100px;	
+}
+
 .modal-body {
 	text-align:left;
 	white-space:normal;	
 	height:600px;
 	overflow-y:auto;
+}
+
+#browser_lb .modal-body {
+	height:auto;
+}
+
+.modal-body img {
+	max-width:100px;
+	max-height:100px;
 }
 
 #offer_table .center-block, 
@@ -1744,9 +1904,19 @@ table tr td.offer .cell_data div div {
 	font-weight:normal;
 }
 
-#offer_table .see_details_text, 
-#merchant_table .see_details_text {
-	font-weight:normal;	
+#offer_table td.offer a span.see_details_text, 
+#merchant_table td.offer a span.see_details_text {
+	font-weight:normal;
+}
+
+#offer_table td.offer a span.see_details_text, 
+#merchant_table td.offer a span.see_details_text,
+#offer_table td.offer a span.glyphicon {
+	color:#008dc9;		
+}
+
+#offer_table td.offer a span {
+	color:#000;	
 }
 
 #offer_table tr td span.price, 
@@ -1758,7 +1928,7 @@ table tr td.offer .cell_data div div {
 
 #offer_table tbody tr td.offer, 
 #merchant_table tbody tr td.offer {
-	width:20%;	
+	xwidth:20%;	
 }
 
 #offer_table tr td.offer .modal-body, 
@@ -1796,11 +1966,48 @@ table tr td.offer .cell_data div div {
 	padding:6px 7px;	
 }
 
+#offer_pagination, #no_offers {
+	xborder: #ddd solid 1px; 
+	xbackground: #eee; 
+	padding: 10px;
+	text-align:center;	
+	font-weight:bold;
+}
+ 
+ #offer_pagination a:hover {
+	xcolor:#2a6496; 
+ }
+ 
+#offer_pagination a, #no_offers a {
+	text-decoration:underline;   
+}
+ 
+#offer_pagination .glyphicon, #offer_pagination .glyphicon:hover {
+	text-decoration:none;
+	border:1px solid #008dc9;
+	border-radius:23px !important;
+	background-color:#008dc9;
+	color:#FFF;
+	padding:6px 4px 6px 7px;
+	font-size:32px;
+	margin-top:15px;
+}
+
+#no_offers .glyphicon, #no_offers .glyphicon:hover {
+	text-decoration:none;
+	border:1px solid #ebebeb;
+	border-radius:23px !important;
+	background-color:#ebebeb;
+	color:#FFF;
+	padding:6px 7px 6px 4px;
+	font-size:32px;
+	margin-top:15px;
+}
+ 
 /* Retailer Forms */
 
 .bene_form select, .bene_form label, .bene_form input, .bene_form button, .bene_form p{
 	display:inline-block;
-	xmargin-bottom:8px;
 }
 	
 #zip-form {
@@ -1957,7 +2164,6 @@ ul.retailers_list li a, ul.retailers_list li span {
 
 #mobile_facets .selectboxit {
 	width:100% !important;
-	xmargin:0px auto 10px;	
 
 }
 
@@ -2008,15 +2214,6 @@ ul.retailers_list li a, ul.retailers_list li span {
 	display:inline-block;	
 }
 
-#search_ad div, #search_ad div div {
-	text-align:center;
-	width:180px !important;
-}
-
-#search_ad iframe {
-	width:	
-}
-
 .default_sort { display: none; }
  
 .sortby_link .glyphicon { display: none; }
@@ -2030,11 +2227,14 @@ ul.retailers_list li a, ul.retailers_list li span {
 /* Interstitial Lightbox */
 
 .modal-dialog {
-	box-shadow:0 5px 10000px rgba(0,0,0,.6) !important;
+	box-shadow:0px 5px 10000px rgba(0,0,0,.6) !important;
+	-webkit-box-shadow:none !important;
+	z-index:999999;
 }
 
 .modal-content {
-	box-shadow:0 5px 10000px rgba(0,0,0,.5);	
+	box-shadow:none !important;	
+	background-clip:initial;
 }
 
 .modal-content .UP_logo_icon {
@@ -2241,6 +2441,14 @@ footer h5 {
 
 @media (max-width: 750px) {
 
+#offcanvas_nav {
+	display:none;	
+}
+
+#offcanvas_nav.in {
+	display:block;	
+}
+
 #carousel {
 	padding:0px;	
 }
@@ -2311,7 +2519,7 @@ footer #base-footer {
 }
 
 #offer_table tr th {
-	white-space:normal;	
+	xwhite-space:normal;	
 }
 
 #merchant_table tr.column_sort th {
@@ -2339,6 +2547,16 @@ footer #base-footer {
 .carousel-inner table tr #banner_right img {
 	width:375px;
 }	
+
+#offer_table tr td.offer div span {
+	white-space:normal;	
+}
+
+.offerlist #offer_table tr th,
+.offerlist #offer_table tr td {
+	padding:8px 4px;	
+	xwidth:20%;	
+}
 
 }
 
@@ -2523,4 +2741,4 @@ div.instore div.offer_type, div.online div.offer_type { display: none; }
 
 }
 
-@media (max-width: @screen-xs-max) { 900px }
+
