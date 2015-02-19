@@ -1650,9 +1650,19 @@ top:10%;
 	text-align:center;	
 }
 
-.article .paid .col-md-4, .benefits .paid .col-md-4 {
+.benefits .paid .col-md-4 {
 	xmargin-bottom:25px;
 	height:175px;	
+}
+
+.article .paid .col-md-4 b {
+	display:block;
+	height:40px;
+}
+
+.article .paid .col-md-4 span.textonlyad {
+	display:block;
+	height:40px;	
 }
 
 .article #paid_placement_two .col-md-4 {
